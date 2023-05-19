@@ -23,8 +23,10 @@ Enter the parameter you would like to change in the place of <>. The default val
 2. `--inp_embed_size` : Size of the input embedding (Default: 256)  <br>
 3. `--num_enc_layers` : Number of Encoder Layers  (Default: 2) <br>
 4. `--num_dec_layers` : Number of Decoder Layers  (Default: 2) <br>
-5. `--hidden_size` : Hidden layer size: Integer denoting the size of hidden layer (Default: 512) <br>
-6. `--dropout` : Dropout: float value (Default:0.25)
+5. `--cell_type` : Type of nn cell used  (Default: GRU) <br>
+6. `--Bidirectional` : Bidirectional (Default: False) <br>
+7. `--hidden_size` : Hidden layer size: Integer denoting the size of hidden layer (Default: 512) <br>
+8. `--dropout` : Dropout: float value (Default:0.25)
 
 The jupyter notebook can be directly run using colab platform in a sequential manner. 
 
