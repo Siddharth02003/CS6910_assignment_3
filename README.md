@@ -35,3 +35,33 @@ do_sweep(entity_name, project_name)
 where
   * `entity_name` : Enter the wandb entity name
   * `project_name` : Enter the wandb project name
+
+<br/>  The various hyperparameters used are :
+```python
+
+        'inp_embed_size': {
+            'values': [32,64,256]
+        },
+        'num_enc_layers' : {
+           'values' : [1,2,3,4]
+        },
+        'num_dec_layers' : {
+           'values' : [1,2,3,4]
+        },
+        'hidden_size': {
+            'values': [256,512,1024]
+        },
+        'cell_type': {
+            'values': ['RNN','LSTM','GRU'],
+        },
+        'bidirectional': {
+            'values': [True,False]
+        },
+        'dropout': {
+            'values': [0.25,0.3,0.4]
+        }
+ sweep_config = {
+      'method' : 'bayes','metric' :{'name': 'validation_char_accuracy','goal': 'maximize'},
+      'parameters': hyperparameters
+    }
+```
